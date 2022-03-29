@@ -74,9 +74,7 @@ const TemperatureSum = () => {
     useEffect(() => {
         setLoading(true);
 
-        fetch(
-            "https://cors-anywhere.herokuapp.com/http://bird.7host.ru:5050/test_api"
-        )
+        fetch("api/")
             .then((res) => res.json())
             .then((data: any) => {
                 setData(data);
