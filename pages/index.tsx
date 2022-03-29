@@ -1,6 +1,7 @@
 import React from "react";
-import TemperatureSum from "../components/charts/TemperatureSum";
+
 import Layout from "../components/Layout";
+import MapDrawPoligon from "../components/map/MapDrawPoligon";
 
 const Index = () => {
     return (
@@ -11,18 +12,9 @@ const Index = () => {
                 keywords="keywords"
             >
                 <main>
-                    <TemperatureSum />
+                    <MapDrawPoligon />
                 </main>
             </Layout>
-
-            <style jsx global>{`
-                main {
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    height: 100vh;
-                }
-            `}</style>
         </>
     );
 };
