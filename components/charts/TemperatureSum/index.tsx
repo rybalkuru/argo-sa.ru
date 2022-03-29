@@ -73,7 +73,9 @@ const TemperatureSum = () => {
 
     useEffect(() => {
         setLoading(true);
-        fetch("http://bird.7host.ru:5050/test_api")
+        fetch("http://bird.7host.ru:5050/test_api", {
+            headers: new Headers({ "Access-Control-Allow-Origin": "*" }),
+        })
             .then((res) => res.json())
             .then((data: any) => {
                 setData(data);
@@ -141,7 +143,7 @@ const TemperatureSum = () => {
                 <YAxis
                     yAxisId="left"
                     type="number"
-                    domain={["auto", "auto"]}
+                    domain={["dataMin", "dataMax"]}
                     unit="°"
                 />
                 <YAxis
